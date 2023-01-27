@@ -5,32 +5,27 @@ A repository for adjusted survival estimations funded by the grant OP VVV IGA/A,
 ## Installation
 
 ```
-source(
-    paste(
-        "https://raw.githubusercontent.com/LStepanek",
-        "survival_adjustments/main",
-        "getMySurvivalTable.R,
-        sep = "/"
+for(
+    my_function in c(
+        
+        "getMySurvivalTable",
+        "getMyKaplanMeierEstimator",
+        "getMyAdjustedKaplanMeierEstimator"
+        
     )
-)
-
-source(
-    paste(
-        "https://raw.githubusercontent.com/LStepanek",
-        "survival_adjustments/main",
-        "getMyKaplanMeierEstimator.R,
-        sep = "/"
+){
+    
+    source(
+        paste(
+            "https://raw.githubusercontent.com/LStepanek/",
+            "survival_adjustments/main/",
+            my_function,
+            ".R",
+            sep = ""
+        )
     )
-)
-
-source(
-    paste(
-        "https://raw.githubusercontent.com/LStepanek",
-        "survival_adjustments/main",
-        "getMyAdjustedKaplanMeierEstimator.R,
-        sep = "/"
-    )
-)
+    
+}
 
 ```
 
